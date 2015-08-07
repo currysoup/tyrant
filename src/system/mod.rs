@@ -1,6 +1,6 @@
 use frametime::FrameTime;
 
-use transform::TransformSystem;
+use self::transform::TransformSystem;
 
 mod transform;
 mod sprite;
