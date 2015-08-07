@@ -1,4 +1,5 @@
 use frametime::FrameTime;
+use gfx::Sprite;
 use math::Vector3;
 
 use self::transform::TransformSystem;
@@ -93,6 +94,7 @@ impl EntitySystem {
 /// Entity builders are used to simplify the process of atomically creating new entities.
 pub struct EntityBuilder<'a> {
     transformable: Option<Vector3>,
+    sprite: Option<Sprite>,
     system: &'a mut EntitySystem,
 }
 
@@ -106,6 +108,11 @@ impl<'a> EntityBuilder<'a> {
 
     pub fn transformable(&mut self, initial_pos: Vector3) -> &mut EntityBuilder<'a> {
         self.transformable = Some(initial_pos);
+        self
+    }
+
+    pub fn has_sprite(&mut self, sprite: Sprite) -> &mut EntityBuilder<'a> {
+        self.sprite = Some(sprite);
         self
     }
 
