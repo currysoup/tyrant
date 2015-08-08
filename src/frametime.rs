@@ -23,11 +23,11 @@ impl FrameTime {
         self.frame_start = frame_end;
     }
 
-    pub fn elapsed_s(&self) -> f64 {
-        self.frame_s
+    pub fn elapsed_s(&self) -> f32 {
+        self.frame_s as f32
     }
 
-    pub fn total_s(&self) -> f64 {
-        self.total_s
+    pub fn total_s(&self) -> f32 {
+        self.total_s as f32
     }
 }

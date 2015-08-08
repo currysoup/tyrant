@@ -1,3 +1,4 @@
+use frametime::FrameTime;
 use super::MAX_ENTITIES;
 
 type SpriteHandle = i32;
