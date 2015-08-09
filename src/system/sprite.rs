@@ -16,6 +16,6 @@ impl SpriteSystem {
         }
     }
 
-    fn update(&mut self, time: &FrameTime) {
+    fn update(&mut self) {
     }
 }

@@ -3,8 +3,8 @@ name = "tyrant"
 version = "0.1.0"
 authors = ["Sam Cutler <sam92cutler@hotmail.co.uk>"]
 
-[dependencies.backend_sdl]
-path = "src/backend_sdl"
-
 [dependencies]
+gl = "0.0.12"
+image = "0.3.11"
+sdl2 = "0.6.1"
 time = "0.1.32"

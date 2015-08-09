@@ -93,16 +93,17 @@ impl EntitySystem {
 
 /// Entity builders are used to simplify the process of atomically creating new entities.
 pub struct EntityBuilder<'a> {
-    transformable: Option<Vector3>,
     sprite: Option<Sprite>,
     system: &'a mut EntitySystem,
+    transformable: Option<Vector3>,
 }
 
 impl<'a> EntityBuilder<'a> {
     pub fn new(system: &'a mut EntitySystem) -> EntityBuilder<'a> {
         EntityBuilder {
-            transformable: None,
+            sprite: None,
             system: system,
+            transformable: None,
         }
     }
 
