@@ -9,8 +9,8 @@ pub struct Matrix {
 
 impl Matrix {
     pub fn orthographic(width: f32, height: f32, near: f32, far: f32) -> Matrix {
-        let half_width = width / 2.0;
-        let half_height = height / 2.0;
+        let half_width = width * 0.5;
+        let half_height = height * 0.5;
 
         let n = near;
         let f = far;
